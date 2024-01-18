@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Global styling end */
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+.container .heading {
+    width: 60%;
+    margin: 1rem auto;
+}
+.container .heading h2 {
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+.container .heading p {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 1.6rem;
+    font-weight: 400;
+    list-style: 2.6rem;
+    text-align: center;
+}
+
+.item {
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
+.item img {
+    height: 100%;
+    width: 100%;
+}
+.text-above {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(77, 77, 77, 0.212);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.gallery {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.item-1 {
+    grid-column: auto/span 6;
+}
+.item-2 {
+    grid-column: auto / span 6;
+}
+.item-3 {
+    grid-column: auto /span 4;
+}
+.item-4 {
+    grid-column: auto /span 5;
+}
+.item-5 {
+    grid-column: auto / span 3;
+}
+.item-6 {
+    grid-column: auto /span 5;
+}
+.item-7 {
+    grid-column: auto/ span 7;
+}
+
+/* Responsive media query */
+@media(max-width: 576px) {
+    .container {
+        width: auto;
+        margin: 0 1rem;
+    }
+    .container .heading {
+        width: 95%;
+    }
+    .container .heading h2 {
+        font-size: 20px;
+    }
+    .container .heading p {
+        font-size: 12px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        
+    }
+    .gallery .item {
+        grid-column: auto;
+        height: 200px;
+    }
+    .text-above {
+        font-size: 24px;
+    }
+}
